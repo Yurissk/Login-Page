@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header class="cabecalho"> 
+        <nav class="navegacao">      
+        <h3><a href="#"><i class="fa-solid fa-circle" id="circle"></i>Anywhere app<span class="ponto">.</span></a></h3>
+        
+            <a class="link-animado" href="#">Home</a>
+            <a class="link-animado" href="#">Join</a>
+        </nav> 
+    </header>
+
+    <main>
+        <section class="containerParagrafo">
+        <p id="start">START FOR FREE</p>
+        <h1 id="create">Create new account<span class="ponto">.</span></h1>
+        <p id="login">Already A Member?<a href="#">Log In</a></p>
+        </section>
+
+        <article class="containerLogin">
+
+            <form action="post" class="formLogin">
+
+                <div class="loginName">
+                    <input class="inputall" type="text" placeholder="First name" required> 
+                    <input class="inputall" type="text" placeholder="Last name" required>
+                </div>
+                <div class="loginPass">
+                    <input class="inputall" type="email" placeholder="Email" required>
+                    <input class="inputall" type="password" placeholder="password" required>
+                </div>
+                <div class="btn">
+                    <button class="btnall" id="btnchange" type="submit">Change method</button> 
+                    <button class="btnall" id="btncreate" type="submit">Create account</button> 
+                </div>
+
+            </form>
+
+        </article>
+
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>

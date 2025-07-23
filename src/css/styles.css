@@ -1,0 +1,267 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: 
+        linear-gradient(280deg, rgba(26, 0, 71, 0) 0%, rgb(8, 0, 12) 52%),
+        url('https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Lexend", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    padding: 20px;
+}
+
+#circle {
+    color: blue;
+    margin: 0px 10px;
+}
+
+/* Navegação */
+.navegacao {
+    margin: 0 7vh;
+    display: flex;
+    flex-direction: row;
+    gap: 12vh;
+}
+
+.navegacao ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 12vh;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: #837799;
+    transition: all 0.3s ease-in-out;
+}
+
+.navegacao h3 a {
+    color: rgba(255, 255, 255, 0.877);
+}
+
+/* Link com sublinhado animado */
+.link-animado {
+    position: relative;
+    text-decoration: none;
+    color: #837799;
+}
+
+.link-animado::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #001eff;
+    transition: width 0.4s ease;
+}
+
+.link-animado:hover::after {
+    width: 100%;
+}
+
+/* Título e texto inicial */
+.containerParagrafo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: rgba(255, 255, 255, 0.877);
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 8vh 20vh;
+}
+
+#start {
+    font-size: 20px;
+    color: #837799;
+}
+
+#create {
+    font-size: 50px;
+}
+
+.ponto {
+    color: #001eff;
+}
+
+/* Login */
+#login {
+    padding: 5px 0;
+    margin: 0;
+    color: #837799;
+}
+
+#login a {
+    text-decoration: none;
+}
+
+.containerLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 0;
+    margin-left: 20vh;
+}
+
+.loginName,
+.loginPass {
+    margin: 0;
+}
+
+.loginName {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.loginName input {
+    border-radius: 15px;
+    border: none;
+    background-color: #23253bd9;
+    padding: 0px 10px;
+    height: 8vh;
+    width: 22vh;
+}
+
+.loginPass {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.loginPass input {
+    height: 8vh;
+    width: 48vh;
+    border-radius: 15px;
+    border: none;
+    background-color: #23253bd9;
+    padding: 0px 10px;
+}
+
+/* Botões */
+.btn button {
+    border-radius: 45px;
+    margin: 20px 4px;
+    height: 7vh;
+    width: 24vh;
+}
+
+#btncreate {
+    color: white;
+    background-color: rgb(0, 98, 255);
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#btnchange {
+    color: rgb(255, 255, 255);
+    background-color: rgb(128, 128, 128);
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#btncreate:hover,
+#btnchange:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #3d53fd94;
+}
+
+/* Foco em input */
+.inputall:focus {
+    outline: 1px solid #001eff;
+    box-shadow: 0px 0px 3px rgb(59, 82, 255);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+
+    .containerParagrafo {
+        padding: 5vh 5vw; 
+    }
+
+    .containerLogin {
+        width: 10vw;
+    }
+
+    .containerLogin form {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-left: 10px;
+    }
+
+    .loginName input,
+    .loginPass input {
+        width: 250px;
+        max-width: 300px;
+    }
+
+    .loginName {
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn button {
+        width: 130px;
+        font-size: 10px;
+    }
+
+    #btnchange {
+        margin-right: 5px;
+    }
+
+    #btncreate {
+        margin-left: 5px;  
+    }
+
+    .navegacao {
+        gap: 4vh;
+        margin: 0 3vh;
+    }
+
+    .navegacao ul li a {
+        font-size: 14px;
+        margin-left: 18px;
+    }
+
+    #start {
+        font-size: 12px;
+    }
+
+    #create {
+        font-size: 40px;
+    }
+
+    #login {
+        font-size: 15px;
+    }
+
+    .containerLogin {
+        margin-left: 10vh;
+    }
+}
