@@ -208,6 +208,7 @@ a {
         flex-direction: column;
         align-items: start;
         margin-left: 10px;
+        gap: 9px;
     }
 
     .loginName input,
@@ -218,7 +219,12 @@ a {
 
     .loginName {
         flex-direction: column;
-        gap: 13px;
+        gap: 10px;
+        margin-bottom: 0px;
+    }
+    .loginPass {
+        margin-top: 0px;
+        gap: 10px;
     }
 
     .btn {
